@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1A1B20"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/devices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/HandleCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/visual_angle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/yaogan_left"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@mipmap/joystick" />
+
+            <com.example.btgamepad.customize.JoystickView2
+                android:id="@+id/joystick_left"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_centerInParent="true" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/direction_key"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@mipmap/direction_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/dpad_up"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/button_up" />
+
+            <ImageView
+                android:id="@+id/dpad_left"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/button_left" />
+
+            <ImageView
+                android:id="@+id/dpad_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/button_right" />
+
+            <ImageView
+                android:id="@+id/dpad_down"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/button_down" />
+
+            <ImageView
+                android:id="@+id/dpad_up_left"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@+id/dpad_left"
+                android:layout_toStartOf="@+id/dpad_up" />
+
+            <ImageView
+                android:id="@+id/dpad_up_right"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@+id/dpad_right"
+                android:layout_toEndOf="@+id/dpad_up" />
+
+            <ImageView
+                android:id="@+id/dpad_down_left"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dpad_left"
+                android:layout_toStartOf="@+id/dpad_down" />
+
+            <ImageView
+                android:id="@+id/dpad_down_right"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dpad_right"
+                android:layout_toEndOf="@+id/dpad_down" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/yaogan_right"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@mipmap/joystick" />
+
+            <com.example.btgamepad.customize.JoystickView2
+                android:id="@+id/joystick_right"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_a"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/button_a"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_b"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/button_b"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </com.example.btgamepad.customize.MoveButton>
+
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_x"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/button_x"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="X"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_y"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/button_y"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="Y"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_rs"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/rs"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="RS"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_rt"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/rt"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="RT"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_rb"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/rb"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="RB"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_lt"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lt"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="LT"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_lb"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lb"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="LB"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_ls"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ls"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/handle_button_ls"
+                android:gravity="center"
+                android:text="LS"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_back"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="@drawable/button_back"
+                android:gravity="center_vertical" />
+
+        </com.example.btgamepad.customize.MoveButton>
+
+        <com.example.btgamepad.customize.MoveButton
+            android:id="@+id/Move_start"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="@drawable/button_play_start"
+                android:gravity="center_vertical" />
+
+        </com.example.btgamepad.customize.MoveButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
